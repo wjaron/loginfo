@@ -2,7 +2,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2016080305;
+$plugin->version   = 2016080308;
+
 $plugin->requires  = 2011102700;
 $plugin->cron      = 0;
 $plugin->component = 'local_loginfo';
