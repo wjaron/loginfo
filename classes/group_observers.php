@@ -29,4 +29,12 @@ class group_observers {
         //$DB->execute($sql);
         
     }
+    
+    public static function user_enrolment_created($event) {
+        
+        $username = $event->get_username();
+        
+        //place for action to be done
+        
+    }
 }
