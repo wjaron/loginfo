@@ -10,29 +10,35 @@ $PAGE->set_title(get_string('loginfo', 'local_loginfo'));       // 10
 
 //echo $OUTPUT->header();
 /////////////////////////////////////////////////////
+echo 'here i am'.'<p>';
+/*
+global $DB;
+        $sql = "SELECT * FROM mdl_local_loginfo ORDER BY id";
+        $result = $DB->get_records_sql($sql);
+        $fp = fopen('dump.csv', 'r');
+        $dumpfile = array(fgetcsv($fp));
+        
+        $csv = array_map('str_getcsv', file('dump.csv'));
+        var_dump($csv);
+echo '</p>';
+*/
+global $DB;
+        $sql = "SELECT * FROM mdl_local_loginfo ORDER BY id";
+        $result = $DB->get_records_sql($sql);
+        $fp = fopen('dump.csv', 'a+');
+        var_dump($result);
+        foreach ($result as $fields) {
+            fputcsv($fp,get_object_vars($fields));
+            var_dump($fp);
+        }
 
-$sql = 'SELECT firstname, lastname, id FROM mdl_user ORDER by id DESC LIMIT 5';
+        fclose($fp);
+        
+        $sqlpath = "SELECT value FROM mdl_config WHERE name = 'local_loginfopath'";
+        $path = $DB->get_records_sql($sqlpath);
+        
+        var_dump($path);
 
-$result = $DB->get_records_sql($sql);
+
 //var_dump($result);
-
-function draw($result){
-    $out = '';
-    $out .= "<table>";
-    foreach ($result as $object => $value){
-        $out .= '<tr>';
-        $out .= '<td>'.$value->id.'</td>';
-        $out .= '<td>'.$value->firstname.'</td>';
-        $out .= '<td>'.$value->lastname.'</td>';
-        $out .= '<tr>';
-    }
-    $out .= "<table>";
-    return $out;
-}
-
-echo draw($result);
-
-///////////////////////////////////////////////////////
-echo $OUTPUT->footer();          
-
 
