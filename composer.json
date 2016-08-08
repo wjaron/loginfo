@@ -1,0 +1,7 @@
+{
+    "name": "loginfo",
+    "type": "moodle-local",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

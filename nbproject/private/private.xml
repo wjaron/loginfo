@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/var/www/moodle/htdocs/local/loginfo/index_1.php</file>
+            <file>file:/var/www/moodle/htdocs/local/loginfo/classes/admin_setting_configtext_validate.php</file>
+            <file>file:/var/www/moodle/htdocs/local/loginfo/db/upgrade.php</file>
+            <file>file:/var/www/moodle/htdocs/local/loginfo/settings.php</file>
+            <file>file:/var/www/moodle/htdocs/local/loginfo/version.php</file>
+            <file>file:/var/www/moodle/htdocs/local/loginfo/classes/group_observers.php</file>
+            <file>file:/var/www/moodle/htdocs/local/loginfo/classes/task/crondump.php</file>
+        </group>
+    </open-files>
+</project-private>
